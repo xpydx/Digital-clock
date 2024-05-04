@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ubah Latar Belakang</title>
+    <style>
+      /* Tambahkan beberapa gaya untuk membuat tampilan lebih baik */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      select {
+        padding: 5px;
+        font-size: 16px;
+      }
+    </style>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <h1 class="halo">halo</h1>
+  <body>
+    <h1>Pilih Warna Latar Belakang</h1>
+    <select id="colorSelector">
+      <option value="">-- Pilih Warna --</option>
+      <option value="orange">Oren</option>
+      <option value="red">Merah</option>
+    </select>
+
+    <script>
+      // Ambil elemen select
+      const colorSelector = document.getElementById("colorSelector");
+
+      // Tambahkan event listener untuk perubahan
+      colorSelector.addEventListener("change", function () {
+        // Ambil nilai yang dipilih
+        const selectedColor = colorSelector.value;
+
+        // Ubah latar belakang sesuai pilihan
+        if (selectedColor === "orange") {
+          document.body.style.backgroundColor = "orange";
+        } else if (selectedColor === "red") {
+          document.body.style.backgroundColor = "red";
+        } else {
+          document.body.style.backgroundColor = ""; // Kembali ke warna default
+        }
+      });
+    </script>
+  </body>
+</html>
